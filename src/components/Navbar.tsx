@@ -15,25 +15,29 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex justify-between items-center py-4 px-16 bg-white transition-all duration-700 ${
+      className={`w-full flex justify-center items-center fixed py-4 px-16 text-primary-text transition-all duration-700 ${
         navbarShadow && "sticky top-0 z-20 shadow-lg"
       }`}
     >
-      <div>_datgeek.manu</div>
-      <ul className="flex justify-center items-center gap-4">
-        {["home", "about", "skills", "portfolio", "testimonials"].map(
-          (e, i) => (
-            <li key={`${e}-${i}`} className="text-md font-semibold capitalize">
-              {e}
-            </li>
-          )
-        )}
-      </ul>
-      <div className="flex justify-center items-center">
-        <button className="flex justify-center items-center gap-2 px-4 py-3 rounded-md bg-red-400 text-md text-white font-semibold">
-          <PhoneCall />
-          <span>Get in touch</span>
-        </button>
+      <div className="w-auto relative flex-none">
+        <div className="flex justify-center items-center gap-6 backdrop-blur-[30px] border border-border-color p-4 bg-background-lighter">
+        <div className="text-lg">_datgeek.manu</div>
+        <ul className="flex justify-center items-center gap-2">
+          {["services", "work", "about", "skills"].map(
+            (e, i) => (
+              <li key={`${e}-${i}`} className="uppercase text-sm font-light">
+                {e}
+              </li>
+            )
+          )}
+        </ul>
+        <div className="flex justify-center items-center">
+          <button className="flex justify-center items-center gap-2 px-4 py-2 rounded-sm bg-primary-btn text-md text-black">
+            {/* <PhoneCall /> */}
+            <span className="uppercase">Let&apos;s talk</span>
+          </button>
+        </div>
+        </div>
       </div>
     </div>
   );

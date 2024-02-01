@@ -14,8 +14,20 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors:{
-        'custom-dark-blue': '#0f182b',
-        'background-footer': '#1C2333' 
+        'primary-black': '#0E0E0E',
+        'primary-text': 'rgb(218, 197, 167)',
+        'primary-btn': '#DAC5A7',
+        'border-color': '#343230',
+        'background-lighter': 'rgba(218, 197, 167, .05)'
+      },
+      keyframes: {
+        wiggle:{
+          '0, 100%': { transform: 'rotate(-45deg)'},
+          '50%': { transform: 'rotate(45deg)'}
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 200ms ease-in-out'
       }
     },
   },
